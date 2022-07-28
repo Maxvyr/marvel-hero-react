@@ -16,7 +16,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Buku</h1>
-        <form action="get" className={styles.grid}>
+        <form method="get" className={styles.grid} action="/library">
           <input className={styles.inputText} type="text" placeholder="Login" />
           <input
             className={styles.inputText}
