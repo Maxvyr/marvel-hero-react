@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Library.module.css";
-import NavLateral from "../component/nav_lateral";
+import NavLateral from "../component/nav-lateral/nav-lateral";
 
 export default function Library() {
   return (
