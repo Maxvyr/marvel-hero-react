@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function ButtonLateral() {
+export default function ButtonLateral({ name }) {
   return (
     <div>
-      <p>ButtonLateral</p>
+      <p>{name}</p>
     </div>
   );
 }

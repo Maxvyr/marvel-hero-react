@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function AddItem() {
+export default function ReadingBook() {
   return (
     <div>
-      <h1>AddItem</h1>
+      <h1>ReadingBook</h1>
     </div>
   );
 }
