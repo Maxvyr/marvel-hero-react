@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Collection() {
+export default function NeedToRead() {
   return (
     <div>
-      <h1>Collection</h1>
+      <h1>NeedToRead</h1>
     </div>
   );
 }
