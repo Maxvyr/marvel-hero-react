@@ -8,9 +8,9 @@ export default function NavLateral() {
     <div className={styles.main}>
       <h2 className={styles.titleNavBar}>Buku</h2>
       <Gap />
-      <ButtonLateral name="Read" />
-      <ButtonLateral name="Reading" />
-      <ButtonLateral name="Need to buy" />
+      <ButtonLateral name="Library" link="/library" />
+      <ButtonLateral name="Reading" link="/reading-book" />
+      <ButtonLateral name="Wait List" link="/wait-list" />
     </div>
   );
 }
