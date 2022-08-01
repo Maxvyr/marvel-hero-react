@@ -36,7 +36,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by <span className={styles.logo}>Maxime Vidalinc</span>
+          Powered by Maxime Vidalinc
         </a>
       </footer>
     </div>
