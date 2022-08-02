@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function SearBar({ filterText, onTextInputChange }) {
-  const handleFilterText = (e) => {
+export default function SearchBar({ search, onTextInputChange }) {
+  const handleSearchText = (e) => {
     onTextInputChange(e.target.value);
   };
 
@@ -10,8 +10,8 @@ export default function SearBar({ filterText, onTextInputChange }) {
       <input
         type="text"
         placeholder="Search book"
-        onChange={handleFilterText}
-        value={filterText}
+        onChange={handleSearchText}
+        value={search}
       />
     </>
   );
