@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonLateral from "../button-lateral/button-lateral";
-import Gap from "../gap/gap";
+import ButtonLateral from "../ButtonLateral/ButtonLateral";
+import Gap from "../Gaps/Gaps";
 import styles from "./NavLateral.module.css";
 
 export default function NavLateral() {
