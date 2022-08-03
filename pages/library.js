@@ -19,7 +19,7 @@ export default function Library() {
       <div className={styles.bodyLibrary}>
         <h1>Library</h1>
         <SearchBar search={search} onTextInputChange={onInputTextChange} />
-        <div className={styles.listBook}>
+        <div className={styles.listBooksa}>
           <BookCompo />
           <AddBook />
         </div>
