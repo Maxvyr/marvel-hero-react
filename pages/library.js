@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Library.module.css";
 import SearchBar from "../component/SearchBar/SearchBar";
-import AddBook from "../component/AddBook/AddBook";
+import AddBookCompo from "../component/AddBookCompo/AddBookCompo";
 import BookCompo from "../component/BooksCompo/BooksCompo";
 
 export default function Library() {
@@ -19,7 +19,7 @@ export default function Library() {
         <SearchBar search={search} onTextInputChange={onInputTextChange} />
         <div className={styles.listBook}>
           <BookCompo />
-          <AddBook />
+          <AddBookCompo />
         </div>
       </div>
     </div>
