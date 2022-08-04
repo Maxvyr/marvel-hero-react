@@ -7,10 +7,29 @@ import TablePerso from "../component/TablePerso/TablePerso";
 
 export default function PeronnagePage() {
   const [searchName, setSearchName] = useState("");
+  const [persos, setPersos] = useState([]);
 
-  const handleCallPersonnage = (name) => {
-    const url =  `https://gateway.marvel.com:443/v1/public/characters?name=spider&apikey=d055642c165e3688bb0c80db9b7d5259`
-  }
+  const myheader = new Headers({
+    "Content-Type": "application/json",
+  });
+
+  const init = {
+    method: "GET",
+    headers: myheader,
+    mode: "cors",
+  };
+
+  const handleCallPersonnage = () => {
+    const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${searchName}&apikey=${process.env.MARVEL_API_KEY}`;
+    fetch(url, init)
+      .then((res) => res.json())
+      .then((json) => {
+        console.log("data", json.data.results);
+        setPersos(json.data.results);
+      })
+      .catch((err) => console.error(`error json ${err}`))
+      .catch((err) => console.error(`error API ${err}`));
+  };
 
   const handleChangeName = (e) => {
     setSearchName(e.target.value);
@@ -36,11 +55,15 @@ export default function PeronnagePage() {
           value={searchName}
           onChange={handleChangeName}
         />
-        <Button variant="contained" color="primary" href="/search">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleCallPersonnage}
+        >
           Search
         </Button>
         <Checkbox />
-        <TablePerso />
+        <TablePerso persos={persos} />
       </main>
     </div>
   );
