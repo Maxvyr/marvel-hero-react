@@ -33,7 +33,7 @@ export default function TablePerso({ persos }) {
               <TableCell align="right">
                 <Image
                   src={`${perso.thumbnail.path}.${perso.thumbnail.extension}`}
-                  alt="Picture of the author"
+                  alt={`Picture of ${perso.name}`}
                   width={500}
                   height={500}
                 />

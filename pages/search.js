@@ -4,10 +4,13 @@ import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import TablePerso from "../component/TablePerso/TablePerso";
+import CardPerso from "../component/CardPerso/CardPerso";
+import GridPerso from "../component/GridPerso/GridPerso";
 
 export default function PeronnagePage() {
   const [searchName, setSearchName] = useState("");
   const [persos, setPersos] = useState([]);
+  const [check, setCheck] = useState(false);
 
   const myheader = new Headers({
     "Content-Type": "application/json",
@@ -24,7 +27,7 @@ export default function PeronnagePage() {
     fetch(url, init)
       .then((res) => res.json())
       .then((json) => {
-        // console.log("data", json.data.results);
+        console.log("data", json.data.results);
         setPersos(json.data.results);
       })
       .catch((err) => console.error(`error json ${err}`))
@@ -33,6 +36,10 @@ export default function PeronnagePage() {
 
   const handleChangeName = (e) => {
     setSearchName(e.target.value);
+  };
+
+  const handleCheck = (e) => {
+    setCheck(e.target.checked);
   };
 
   return (
@@ -62,8 +69,8 @@ export default function PeronnagePage() {
         >
           Search
         </Button>
-        <Checkbox />
-        <TablePerso persos={persos} />
+        <Checkbox checked={check} onClick={handleCheck} />
+        {check ? <TablePerso persos={persos} /> : <GridPerso persos={persos} />}
       </main>
     </div>
   );
