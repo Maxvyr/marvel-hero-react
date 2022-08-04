@@ -1,6 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+
+import Button from "@mui/material/Button";
 
 export default function Home() {
   return (
@@ -15,19 +19,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Buku</h1>
-        <form method="get" className={styles.grid} action="/library">
-          <input className={styles.inputText} type="text" placeholder="Login" />
-          <input
-            className={styles.inputText}
-            type="password"
-            placeholder="Password"
-          />
-
-          <button className={styles.inputBt} type="submit">
-            Connexion
-          </button>
-        </form>
+        <h1 className={styles.title}>Marvel</h1>
+        <Button variant="contained" href="/search">
+          Search Page
+        </Button>
       </main>
 
       <footer className={styles.footer}>
