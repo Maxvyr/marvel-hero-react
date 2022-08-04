@@ -23,7 +23,7 @@ export default function TablePerso({ persos }) {
         <TableBody>
           {persos.map((perso) => (
             <TableRow
-              key={perso.name}
+              key={perso.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">

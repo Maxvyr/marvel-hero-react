@@ -24,7 +24,7 @@ export default function PeronnagePage() {
     fetch(url, init)
       .then((res) => res.json())
       .then((json) => {
-        console.log("data", json.data.results);
+        // console.log("data", json.data.results);
         setPersos(json.data.results);
       })
       .catch((err) => console.error(`error json ${err}`))
