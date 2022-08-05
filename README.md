@@ -1,6 +1,6 @@
 # Buku
 
-
+Search all Marvel personnage simple and easy, don't forget to get a key for the API on this [website](https://developer.marvel.com/) 
 
 ## Getting Started
 
